@@ -1,10 +1,10 @@
 import { Button } from "semantic-ui-react";
 
 
-  const ButtonSaveOrCancel= () =>( <Button.Group >
-    <Button>Cancel</Button>
+  const ButtonSaveOrCancel= ({addEntry,resetEntry}) =>( <Button.Group >
+    <Button onClick={()=> resetEntry()}>Cancel</Button>
     <Button.Or />
-    <Button primary>Ok</Button>
+    <Button primary onClick={()=> addEntry()}>Ok</Button>
   </Button.Group>)
 
 export default ButtonSaveOrCancel;
